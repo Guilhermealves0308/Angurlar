@@ -1,0 +1,19 @@
+<h1>{{titulo}}</h1>
+<div class="from-group">
+  <div class="col-sm-2"> <label>nome:</label> <input type="text" [(ngModel)]="nome" class="form-control"> </div>
+  <div class="from-group">
+    <label> Ano de Nascimento</label>
+    <div class="col-sm-2"> <input type="text" [(ngModel)]="dtnasc" class="form-control" placeholder-="99/99/9999"
+        maxlength="10" (keypress)="mascara_data()">
+      <div class="form group">
+        <div class="" col-sm-2> <label>A idade é: </label> <input type="text" [(ngModel)]="idade" class="form-control"
+            disabled="true"> </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="btn-goup" role="group"> <button (click)="calcular()" class="btn btn-primary">calcular</button>
+          <button (click)="limpar" class="btn-outline-danger">limpar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <router-outlet></router-outlet>
